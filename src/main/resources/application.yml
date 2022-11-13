@@ -1,0 +1,6 @@
+  thymeleaf:
+    cache: false
+    prefix: classpath:/template/
+    suffix: .html
+    encoding: UTF-8
+    mode: HTML5

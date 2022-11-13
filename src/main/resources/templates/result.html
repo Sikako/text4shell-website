@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Executed command</title>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <link th:replace="header :: header_css">
+    <link rel="stylesheet" href="css/gallery.css" type="text/css" />
+</head>
+    <body>
+        <h1 th:text="${t}" class="header"></h1>
+        <div th:replace="header :: header"></div>
+        <div class="row">
+            <div class="column middle">
+                <div th:if="${t == 'SUP'}" th:each="num: ${#numbers.sequence(1,5)}">
+                    <div class="gallery">
+                        <img th:src="@{/images/SUP/{i}.JPG(i=${num})}" width="600" height="400">
+                        <div class="desc">Add a description of the image here</div>
+                    </div>
+                </div>
+                <div th:if="${t == 'MOUNTAINS'}" th:each="num: ${#numbers.sequence(1,9)}">
+                    <div class="gallery">
+                        <img th:src="@{/images/mountains/{i}.jpg(i=${num})}" width="600" height="400">
+                        <div class="desc">Add a description of the image here</div>
+                    </div>
+                </div>
+            </div>
+            <div class="column side">
+                <p th:if="${t == 'SUP'}">摸黑著在冰冷的山地上行走，看著天空逐漸變亮，大地恢復了色彩，前方的清水斷崖大浪不斷的沖刷，但不衝過這道道浪花，便看不到之後寧靜且遼闊的太平洋。</p>
+                <p th:if="${t == 'MOUNTAINS'}">在東亞小小的36,179平方公里中，擁有285座3000米以上的高山，在大自然的鬼斧神工下孕育了多樣化的生態與環境。國外的風景很美，但這座寶島的迷人與魅力也不惶多讓。</p>
+                </p>
+            </div>
+        </div>
+        <div th:replace="header :: footer"></div>
+    </body>
+</html>

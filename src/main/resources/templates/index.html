@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Sikako's Photo Album</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="favicon.ico"/>
+<link th:replace="header :: header_css">
+<link rel="stylesheet" href="css/gallery.css" type="text/css" />
+</head>
+<body id="index">
+  <h1 style="color: white;">MCDX Photo Album</h1>
+  <div th:replace="header :: header"></div>
+
+  <!-- <video autoplay muted loop id="myVideo">
+    <source src="videos/index.mp4" type="video/mp4">
+  </video> -->
+  <div class="row" style="font-size: 24px; padding: 10px; line-height: 1.6; color: white; text-align: center; margin-top: 30vh;">
+    Hello, This is Sikako's online <b>Photo Album</b> <br />
+    I like lots of outdoor activity!
+  </div>
+  <div>
+    
+  </div>
+  <div th:replace="header :: footer"></div>
+</body>
+</html>

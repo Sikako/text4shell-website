@@ -1,0 +1,14 @@
+
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="css/styles.css" type="text/css" th:fragment="header_css"/>
+<div id="tabs" th:fragment="header">
+  <ul>
+    <li><a th:href="@{/}" title="Home"><span><b>Home</b></span></a></li>
+    <li><a th:href="@{/result(s='SUP')}" title="SUP"><span>SUP</span></a></li>
+    <li><a th:href="@{/result(s='MOUNTAINS')}" title="Mountains"><span>Mountains</span></a></li>
+  </ul>
+</div>
+<div class="footer" th:fragment="footer">
+  Powered by JDK 18 Spring Boot © Sikako
+</div>
+</html>
